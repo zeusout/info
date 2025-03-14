@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TeamMove 소개</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #e0f2fe, #f0f9ff);
+            color: #333;
+            text-align: center;
+        }
+        header {
+            background: #fff;
+            color: #333;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: #333;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .tab-content {
+            display: none;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+            padding: 30px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 20px;
+        }
+        .active {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .service-box, .team-box {
+            display: inline-block;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            margin: 15px;
+            text-align: center;
+        }
+        .status.online {
+            color: #16a34a;
+            font-weight: bold;
+        }
+        .server-address {
+            background: #eee;
+            padding: 10px;
+            border-radius: 5px;
+            display: inline-block;
+        }
+        footer {
+            margin-top: 30px;
+            padding: 10px;
+            background: #fff;
+            color: #333;
+            box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+    <script>
+        function showTab(tabId) {
+            document.querySelectorAll('.tab-content').forEach(tab => {
+                tab.style.display = 'none';
+                tab.classList.remove('active');
+            });
+            
+            setTimeout(() => {
+                document.getElementById(tabId).style.display = 'block';
+                setTimeout(() => {
+                    document.getElementById(tabId).classList.add('active');
+                }, 10);
+            }, 200);
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>TeamMove</h1>
+        <nav>
+            <ul>
+                <li><a onclick="showTab('about')">소개</a></li>
+                <li><a onclick="showTab('services')">서비스</a></li>
+                <li><a onclick="showTab('team')">운영진 소개</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="tab-content active" id="about">
+        <h2>소개</h2>
+        <p>TeamMove는 마인크래프트 서버 운영 및 다양한 맞춤형 게임 서비스를 제공하는 팀입니다.</p>
+        <p>최고의 경험을 위해 지속적으로 발전하며, 서버 안정성과 유저 편의를 최우선으로 생각합니다.</p>
+    </div>
+    
+    <div class="tab-content" id="services">
+        <h2>서비스</h2>
+        <div class="service-box">
+            <img src="server-image.jpg" alt="서버 이미지" width="200">
+            <p><strong>행님 마크 서버</strong></p>
+            <div class="server-address">서버 주소: 개발 중</div>
+            <span class="status online">● 온라인</span>
+        </div>
+        <div class="service-box">
+            <p><strong>맞춤형 게임 개발</strong></p>
+            <p>TeamMove에서는 유저 맞춤형 미니게임을 개발하고 제공합니다.</p>
+        </div>
+    </div>
+    
+    <div class="tab-content" id="team">
+        <h2>운영진 소개</h2>
+        <div class="team-box">
+            <img src="javashin.jpg" alt="자바신" width="100">
+            <p><strong>대표: 자바신</strong></p>
+            <p>TeamMove를 이끄는 리더로, 서버 운영 및 개발을 담당합니다.</p>
+        </div>
+        <div class="team-box">
+            <img src="sonoma.jpg" alt="소노마" width="100">
+            <p><strong>관리자: 소노마</strong></p>
+            <p>서버 관리 및 운영을 책임지며, 유저 지원을 담당합니다.</p>
+        </div>
+        <div class="team-box">
+            <img src="anna.jpg" alt="애나" width="100">
+            <p><strong>도우미: 애나</strong></p>
+            <p>유저 응대와 이벤트 진행을 담당하는 도우미입니다.</p>
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2025 TeamMove | 모든 권리 보유</p>
+    </footer>
+</body>
+</html>

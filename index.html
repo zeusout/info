@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <link rel="icon" href="favicon.png" type="image/png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TeamMove 소개</title>
@@ -52,7 +51,7 @@
             opacity: 1;
             transform: translateY(0);
         }
-        .service-box, .team-box {
+        .service-box, .team-box, .language-box {
             display: inline-block;
             padding: 20px;
             background: #f9f9f9;
@@ -103,6 +102,7 @@
                 <li><a onclick="showTab('about')">소개</a></li>
                 <li><a onclick="showTab('services')">서비스</a></li>
                 <li><a onclick="showTab('team')">운영진 소개</a></li>
+                <li><a onclick="showTab('languages')">개발 언어</a></li>
             </ul>
         </nav>
     </header>
@@ -118,7 +118,7 @@
         <div class="service-box">
             <img src="server-image.jpg" alt="서버 이미지" width="200">
             <p><strong>행님 마크 서버</strong></p>
-            <div class="server-address">서버 주소: 개발 중</div>
+            <div class="server-address">서버 주소: [베타에서는 복사 불가]</div>
             <span class="status online">● 온라인</span>
         </div>
         <div class="service-box">
@@ -144,6 +144,14 @@
             <p><strong>도우미: 애나</strong></p>
             <p>유저 응대와 이벤트 진행을 담당하는 도우미입니다.</p>
         </div>
+    </div>
+
+    <div class="tab-content" id="languages">
+        <h2>개발 언어</h2>
+        <div class="language-box"><p><strong>Python</strong></p></div>
+        <div class="language-box"><p><strong>Java</strong></p></div>
+        <div class="language-box"><p><strong>Kotlin</strong></p></div>
+        <div class="language-box"><p><strong>Node.js</strong></p></div>
     </div>
     
     <footer>
